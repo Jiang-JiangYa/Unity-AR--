@@ -1,0 +1,13 @@
+* text=auto eol=lf
+
+# Unity serializes empty YAML values with trailing spaces.
+*.asset -whitespace
+*.meta -whitespace
+*.unity -whitespace
+*.prefab -whitespace
+*.mat -whitespace
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
