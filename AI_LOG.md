@@ -451,7 +451,8 @@
 
 ### 结果
 
-- 修改后采用（发布准备已验证，远程推送结果随后补记）。
-- 两个指定远程仓库 ls-remote 均成功且无现有分支；本地 master 尚无提交，不覆盖远程历史。
+- 修改后采用：GitHub 与 Gitee 已成功发布，并读取远程 refs 验证内容一致。
+- 首次检查时，两个指定远程仓库 ls-remote 均成功且无现有分支，本地 master 尚无提交；本次未覆盖远程历史。
 - 补齐 Unity .utmp、编辑器本地偏好、缓存、环境文件和签名密钥的忽略规则。仅收录三端源码、Unity 必需资源和设置、锁文件、项目文档、相关辅助脚本及根目录演示视频；排除 .tools、node_modules、Library、APK、JSON 运行数据和本地 .env。
-- 待发布 81 个文件约 13.8 MiB，常见敏感凭据格式扫描未发现匹配；当前 Go test、go vet、React TypeScript/Vite 构建均通过。未恢复用户已删除的 AI 日志部分。
+- 补充跨平台换行与 Unity YAML 空白规则 .gitattributes 后，实际提交 82 个文件约 13.8 MiB。常见敏感凭据格式扫描未发现匹配；当前 Go test、go vet、React TypeScript/Vite 构建均通过。未恢复用户已删除的 AI 日志部分。
+- 首次项目提交为 827c28b427e8f6200dce64bee4c4e83cc50146d1；实际 git push 均成功，两端 refs/heads/master 均读回此提交。随后正常提交本条发布结果记录并同步，不使用强制推送。
